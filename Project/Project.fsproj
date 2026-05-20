@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <!-- Utilities -->
+    <Compile Include="Timing.fs" />
+    <Compile Include="StreamGenerator.fs" />
+
+    <!-- Hash functions -->
+    <Compile Include="Hashing/MultiplyShift.fs" />
+    <Compile Include="Hashing/MultiplyModPrime.fs" />
+    <Compile Include="Hashing/FourUniversal.fs" />
+
+    <!-- Data structures -->
+    <Compile Include="DataStructures/HashTable.fs" />
+    <Compile Include="DataStructures/CountSketch.fs" />
+
+    <!-- Experiments -->
+    <Compile Include="Experiments/ExactExperiments.fs" />
+    <Compile Include="Experiments/SketchExperiments.fs" />
+    <Compile Include="Experiments/Csv.fs" />
+
+    <!-- Main entry point -->
+    <Compile Include="Program.fs" />
+
+  </ItemGroup>
+
+</Project>
