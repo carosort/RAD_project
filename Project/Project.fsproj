@@ -10,6 +10,7 @@
     <!-- Utilities -->
     <Compile Include="Timing.fs" />
     <Compile Include="StreamGenerator.fs" />
+    <Compile Include="Csv.fs" />
 
     <!-- Hash functions -->
     <Compile Include="Hashing/MultiplyShift.fs" />
@@ -23,7 +24,6 @@
     <!-- Experiments -->
     <Compile Include="Experiments/ExactExperiments.fs" />
     <Compile Include="Experiments/SketchExperiments.fs" />
-    <Compile Include="Experiments/Csv.fs" />
 
     <!-- Main entry point -->
     <Compile Include="Program.fs" />
