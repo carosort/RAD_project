@@ -11,8 +11,7 @@ open System.Diagnostics
 // Funktionen bliver kørt, tiden bliver målt, tiden bliver printet, resultatet af funktionen bliver returneret
 //
 // Kald den med en lambda funktion, i.e.:
-// measure "name" (fun () ->
-//     functionName functionInput)
+//     measure "name" (fun () -> functionName functionInput)
 let measure (name: string) f =
 
     let sw = Stopwatch.StartNew()
@@ -36,8 +35,7 @@ let measure (name: string) f =
 //          f:      den funktion, vi vil tage tid på 
 //
 // Kald den med en lambda funktion, i.e.:
-// benchmark 10 "name" (fun () ->
-//     functionName functionInput)
+//     benchmark 10 "name" (fun () -> functionName functionInput)
 let benchmark (runs: int) (name: string) f =
 
     // Warmup

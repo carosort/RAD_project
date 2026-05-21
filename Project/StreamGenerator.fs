@@ -1,10 +1,11 @@
 module StreamGenerator
 
-// Indput: 
-//          n:  heltal, antallet af elementer i strømmen
-//          l:  heltal, beskriver antallet af forskellige nøgler i strømmen
-//
-// Specifikt vil der være 2l forskellige nøgler i strømmen og strømmen vil have længde n
+/// <summary>
+/// Generere en *n* lang strøm, med 2^l forskellige nøgler.
+/// </summary>
+/// <param name="n">Heltal, antallet af elementer i strømmen.</param>
+/// <param name="l">Heltal, beskriver antallet af forskellige nøgler i strømmen.</param>
+/// <returns>En *n* lang sekvens af (nøgle, værdi) par.</returns>
 let createStream (n: int) (l: int) : seq<uint64 * int> = 
     seq {
         // We generate a random uint64 number.

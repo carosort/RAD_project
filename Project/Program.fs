@@ -9,8 +9,8 @@ let main argv =
 
     // GØR TING HER!!!!
     // DVs.:
-    // definér funktioner til at køre experimenter i Exact/SketchExperiments.fs
-    // definér funktioner til at gemme resultater som csv i Csv.fs
+    // definér funktioner til at køre experimenter i "ExactExperiments.fs"/"SketchExperiments.fs"
+    // definér funktioner til at gemme resultater som csv i "Csv.fs"
     // kør de relevante funktioner her
 
     // PARAMETRE 
