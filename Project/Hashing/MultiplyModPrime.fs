@@ -2,9 +2,15 @@ module MultiplyModPrime
 
 open System.Numerics
 
-// a:   heltal skarpt mindre end p
-// b:   heltal skarpt mindre end p
-// l:   positivt heltal mindre end 64
+/// <summary>
+/// Implementering af *Multiply-Mod-Prime* hashing.\
+/// Løser opgave 1.b.
+/// </summary>
+/// <param name="a">Tilfældigt heltal tilhørende [p]={0,1,...,p-1}.</param>
+/// <param name="b">Tilfældigt heltal tilhørende [p]={0,1,...,p-1}.</param>
+/// <param name="l">Positivt heltal mindre end 64.</param>
+/// <param name="x">Nøgle der skal hashes.</param>
+/// <returns>Hashværdien af x.</returns>
 let hashModPrime (a:bigint) (b:bigint) (l:int) (x: uint64): uint64 =
     let p: bigint = (1I <<< 89) - 1I
 
