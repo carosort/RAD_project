@@ -11,11 +11,12 @@ open System.Numerics
 /// <param name="l">Positivt heltal mindre end 64.</param>
 /// <param name="x">Nøgle der skal hashes.</param>
 /// <returns>Hashværdien af x.</returns>
-let hashModPrime (a:bigint) (b:bigint) (l:int) (x: uint64): uint64 =
+let hashModPrime (a: bigint) (b: bigint) (l: int) (x: uint64): uint64 =
     let p: bigint = (1I <<< 89) - 1I
 
     let z: bigint = a * (bigint x) + b
-    let y: bigint = (z &&& p) + bigint (x >>> 89)
+    let y: bigint = (z &&& p) + (z >>> 89)
+    
     if y >= p then
         uint64 ((y - p) &&& ((1I <<< l) - 1I))
     else

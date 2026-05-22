@@ -8,5 +8,5 @@ module MultiplyShift
 /// <param name="l">Positivt heltal mindre end 64.</param>
 /// <param name="x">Nøgle der skal hashes.</param>
 /// <returns>Hashværdien af x.</returns>
-let hashShift (a:uint64) (l:int) (x:uint64): uint64=
+let hashShift (a: uint64) (l: int) (x: uint64): uint64 =
     (a * x) >>> (64 - l)
