@@ -14,7 +14,10 @@ let main argv =
     // kør de relevante funktioner her
 
     // PARAMETRE 
-    // let n = NOGET
+    let n: int = 1_000_000
+    let l: int = 10
+
+    runHashBenchmarks n l
 
     // OPGAVE 1.c: TEST HASH FUNCTIONS
     //
