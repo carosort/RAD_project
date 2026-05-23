@@ -1,7 +1,8 @@
 module StreamGenerator
 
 /// <summary>
-/// Generere en *n* lang strøm, med 2^l forskellige nøgler.
+/// Generere en *n* lang strøm, med 2^l forskellige nøgler.\
+/// Bemærk d_i ∈ {-1, 1} for et vilkårligt d_i.
 /// </summary>
 /// <param name="n">Heltal, antallet af elementer i strømmen.</param>
 /// <param name="l">Heltal, beskriver antallet af forskellige nøgler i strømmen.</param>

@@ -14,10 +14,12 @@ let main argv =
     // kør de relevante funktioner her
 
     // PARAMETRE 
-    let n: int = 1_000_000
-    let l: int = 10
+    let n: int = 1<<<20 // cirka 1_000_000 ; det er vigtigt at createStream at: 2^l ≤ n
+    let l: int = 10 // keep bellow 32, i.e. l<32
 
     runHashBenchmarks n l
+
+    runSquareSumBenchmark n [5..15]
 
     // OPGAVE 1.c: TEST HASH FUNCTIONS
     //
