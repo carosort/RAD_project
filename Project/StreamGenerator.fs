@@ -37,3 +37,6 @@ let createStream (n: int) (l: int) : seq<uint64 * int> =
             x <- x + a
             yield (x &&& (((1UL <<< l) - 1UL) <<< 30), 1)
     }
+
+let generateStream (n: int) (l: int) : (uint64 * int)[] = 
+    createStream n l |> Seq.toArray

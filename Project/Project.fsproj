@@ -24,6 +24,7 @@
     <!-- Experiments -->
     <Compile Include="Experiments/ExactExperiments.fs" />
     <Compile Include="Experiments/SketchExperiments.fs" />
+    <Compile Include="Experiments.fs" />
 
     <!-- Main entry point -->
     <Compile Include="Program.fs" />

@@ -35,3 +35,17 @@ type HashTable (h : int -> uint64 -> uint64, l : int) =
 
     // helper for opgave 3
     member _.getTable () = table
+
+
+
+let squareSum (stream : (uint64 * int)[]) (table : HashTable) : bigint =
+    for (x,d) in stream do
+        table.increment(x,d)
+
+    let mutable sum = 0I
+    for bucket in table.getTable() do
+        for (_,v) in bucket do
+            let s = bigint v
+            sum <- sum + s*s
+    sum
+    

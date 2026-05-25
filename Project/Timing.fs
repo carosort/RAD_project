@@ -64,3 +64,40 @@ let benchmark (runs: int) (name: string) f =
 
     avg
 
+
+
+let runtime f = 
+    let sw = Stopwatch.StartNew()
+    let result = f()
+    sw.Stop()
+
+    let time = sw.Elapsed.TotalMilliseconds
+
+    time, result
+
+let timer (sw : Stopwatch) f = 
+    sw.Start()
+    let r = f()
+    sw.Stop()
+    r
+
+// let avg_runtime n f =
+//     let sw = Stopwatch()
+//     let o = f()
+//     let results = Array.init n (fun _ -> o)
+
+//     for i in 1..n do
+//         sw.Start()
+//         results.[i] <- f()
+//         sw.Stop()
+
+//     let time = sw.Elapsed.TotalMilliseconds / float n
+
+//     time, results
+
+let avg_runtime n f =
+    let sw = Stopwatch()
+    let results = Array.init n (fun _ -> timer sw f)
+    let time = sw.Elapsed.TotalMilliseconds / float n
+
+    time, results
