@@ -16,10 +16,11 @@ let main argv =
     // PARAMETRE 
     let n: int = 1<<<20 // cirka 1_000_000 ; det er vigtigt at createStream at: 2^l ≤ n
     let l: int = 10 // keep bellow 32, i.e. l<32
+    assert (0 <= l && l < (1<<<l) && 1<<<l <= n) // i.e. checks that : 0 ≤ l < 2^l ≤ n
 
     runHashBenchmarks n l
 
-    runSquareSumBenchmark n [5..15]
+    runSquareSumBenchmark n [5..10] // use [1..20]
 
     // OPGAVE 1.c: TEST HASH FUNCTIONS
     //

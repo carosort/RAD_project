@@ -11,6 +11,10 @@ open HashTable
 let a = 0b1001_1001_0011_0001_0010_0101_1000_1000_0011_1001_0011_1001_0010_0101_0110_0111UL // has to be odd
 let a': bigint = 47529364501441017828375504I // cannot use suffix I after 0b notation, hence decimal
 let b': bigint = 538434095195490410313078429I
+let a0 = 0
+let a1 = 0
+let a2 = 0
+let a3 = 0
 
 
 // OPGAVE 1.c :
@@ -69,3 +73,10 @@ let runSquareSumBenchmark n ls =
         let table = HashTable(hashModPrime a' b', l')
         let sum = measure "SquareSum-MulModPrime" (fun () -> squareSum stream table)
         printfn " with 2^%A different keys    (sum=%A)" l' sum
+
+
+
+// OPGAVE 6
+let estimateSquareSum (sketch : int[]) : uint64 =
+    Array.sumBy (fun v -> uint64 (v*v)) sketch
+
