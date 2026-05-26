@@ -87,7 +87,7 @@ let Opgave7'8 (n : int) (l : int) (ts : int[]) =
     let experiments_t (t : int) =
         let sw = Stopwatch()
         let results = Array.map (fun a' -> timer sw (fun () -> CountSketch t a' stream) |> estimateSquareSum) a0123
-        let time = sw.Elapsed.TotalMilliseconds / float (Array.length a0123)
+        let avg_time = sw.Elapsed.TotalMilliseconds / float (Array.length a0123)
         let medians =
             results
             |> Array.chunkBySize 11
@@ -95,12 +95,21 @@ let Opgave7'8 (n : int) (l : int) (ts : int[]) =
             |> Array.map (fun chunk -> (Array.sort chunk)[6])
             |> Array.sort
             |> Array.zip [|1..((Array.length a0123)/11)|]
-        let mse = (Array.sumBy (fun X -> (X-S)*(X-S)) results) / (Array.length a0123)
+        let mse = Array.sumBy (fun X -> (X-S)*(X-S)) results / bigint (Array.length a0123)
         let points = 
             results
             |> Array.sort
             |> Array.zip [|1..(Array.length a0123)|] 
 
-        time, mse, S, points, medians
+        t, avg_time, mse, S, points, medians
+
+    let exp_res = Array.map (fun t -> experiments_t t) ts
+    // presentation
+    printfn $"
+    ===== Opgave 7 & 8 ====="
+    for t, avg_time, mse, S, points, medians in exp_res do
+        printfn $"m = 2^{t},   mean runtime = %.3f{avg_time},   MSE = {mse},   S = {S}"
+        printfn "Medians = %A" medians
+        printfn "Points = %A\n" points
 
     

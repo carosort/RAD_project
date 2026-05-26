@@ -1,6 +1,4 @@
-﻿open ExactExperiments
-open SketchExperiments
-open Csv
+﻿open Csv
 open Experiments
 
 [<EntryPoint>]
@@ -15,7 +13,7 @@ let main argv =
     // kør de relevante funktioner her
 
     // PARAMETRE 
-    let n: int = 1<<<20 // cirka 1_000_000 ; det er vigtigt at createStream at: 2^l ≤ n
+    let n: int = 1<<<10 // cirka 1_000_000 ; det er vigtigt at createStream at: 2^l ≤ n
     let l: int = 10 // keep bellow 32, i.e. l<32
     assert (0 <= l && l < (1<<<l) && 1<<<l <= n) // i.e. checks that : 0 ≤ l < 2^l ≤ n
 
@@ -32,7 +30,7 @@ let main argv =
     // gem køretider og l til en csv, og præsentér i en tabel
     // dvs. resultater (kvadratsum) er irrelevant
 
-    Opgave3 n [|5..15|] 5
+    Opgave3 n [|5..10|] 5
 
     // OPGAVE 7 & 8: COUNT-SKETCH EXPERIMENTS
     // 7:
@@ -47,7 +45,7 @@ let main argv =
     // returnér både RESULTATER og KØRETIDER (gennemsnit) for forskellige m
     // gem kvadratsumsestimater til en csv og lav diverse plots af X_i og S
 
-    // printfn "%A" (test n l)
+    Opgave7'8 n l [|5; 10|]
 
     printfn "Finished."
 

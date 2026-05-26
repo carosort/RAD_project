@@ -1,0 +1,43 @@
+{
+    "Opgave1": {
+        "MulShift_runtime_ms": number,
+        "MulModPrime_runtime_ms": number,
+        "debug_sums": {
+            "mulshift": number,
+            "mulmodprime": number
+        }
+    },
+
+    "Opgave3": {
+        "streams": [
+            {
+                "l": number,
+                "SquareSum_MulShift_runtime_ms": number,
+                "SquareSum_MulModPrime_runtime_ms": number,
+                "debug_sums": {
+                    "mulshift": number,
+                    "mulmodprime": number
+                }
+            },
+            ...
+        ]
+    },
+
+    "Opgave7_8": [
+        {
+            "t": number,
+            "m": number,
+            "runtime_ms": number,
+            "mean_squared_error": number,
+            "square_sum": number,
+            "estimates": [
+                { "x": number, "y": number },
+                ...
+            ],
+            "median_estimates": [
+                { "x": number, "y": number }, 
+                ...
+            ]
+        }
+    ]
+}
