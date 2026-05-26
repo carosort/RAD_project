@@ -1,3 +1,4 @@
+/// DEPRICATED
 module ExactExperiments 
 
 open StreamGenerator

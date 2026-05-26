@@ -12,3 +12,11 @@ let CountSketch (t: int) (a: bigint[]) (stream : seq<uint64 * int>) : int[] =
         let hx, sx = hx_sx x
         C.[int hx] <- C.[int hx] + sx*d
     C
+
+
+
+let estimateSquareSum (sketch : int[]) : bigint =
+    sketch |> 
+    Array.sumBy (fun (v:int) -> 
+        let v' = bigint v
+        v'*v')

@@ -1,3 +1,4 @@
+/// DEPRICATED
 module SketchExperiments
 
 open StreamGenerator

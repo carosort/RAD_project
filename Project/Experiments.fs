@@ -70,4 +70,19 @@ let Opgave3 n ls r =
 // returnér både RESULTATER og KØRETIDER (gennemsnit) for forskellige m
 // gem kvadratsumsestimater til en csv og lav diverse plots af X_i og S
 
+let Opgave7'8 (n : int) (l : int) (ts : int[]) =
+    let stream = generateStream n l
+    let S = squareSum stream (HashTable(hashShift a, l))
 
+    let experiments_t (t : int) =
+        let sw = Stopwatch()
+        let results = 
+            a0123 |> 
+            Array.map (fun a' -> timer sw (fun () -> CountSketch t a' stream) |> estimateSquareSum) |>
+            Array.sort |>
+            Array.zip [|1..(Array.length a0123)|]
+        let time = sw.Elapsed.TotalMilliseconds / float (Array.length a0123)
+
+        time, results
+
+    
