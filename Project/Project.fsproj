@@ -23,6 +23,7 @@
 
     <!-- Experiments -->
     <Compile Include="Experiments.fs" />
+    <Compile Include="WIP_Experiments.fs" />
 
     <!-- Main entry point -->
     <Compile Include="Program.fs" />
