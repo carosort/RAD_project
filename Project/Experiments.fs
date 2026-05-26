@@ -28,7 +28,7 @@ let Opgave1 n l =
     let time = sw.Elapsed.TotalMilliseconds
     // benchmarking MultiplyModPrime hashing
     let sw' = Stopwatch()
-    let h' = hashShift a l
+    let h' = hashModPrime a' b' l
     let sum' = Array.sumBy (fun (x,_) -> timer sw' (fun _ -> h' x)) stream
     let time' = sw'.Elapsed.TotalMilliseconds
     // presentation
@@ -46,10 +46,20 @@ let Opgave1 n l =
 
 let Opgave3 n ls r =
     let arr = 
-        ls |> 
-        Array.map (fun l -> l, generateStream n l, HashTable(hashShift a, l), HashTable(hashModPrime a' b', l)) |>
-        Array.map (fun (l, s, t, t') -> l, avg_runtime r (fun () -> squareSum s t), avg_runtime r (fun () -> squareSum s t')) |>
-        Array.map (fun (l, (t,s),(t',s')) -> l, (t, Array.sum s / bigint r), (t', Array.sum s' / bigint r))
+        ls
+        |> Array.map (fun l -> 
+            l, 
+            generateStream n l, 
+            HashTable(hashShift a, l), 
+            HashTable(hashModPrime a' b', l))
+        |> Array.map (fun (l, s, t, t') -> 
+            l, 
+            avg_runtime r (fun () -> squareSum s t), 
+            avg_runtime r (fun () -> squareSum s t'))
+        |> Array.map (fun (l, (t,s),(t',s')) -> 
+            l, 
+            (t, Array.sum s / bigint r), 
+            (t', Array.sum s' / bigint r))
     // presentation
     printfn $"
     ===== Opgave 3 =====
@@ -76,13 +86,21 @@ let Opgave7'8 (n : int) (l : int) (ts : int[]) =
 
     let experiments_t (t : int) =
         let sw = Stopwatch()
-        let results = 
-            a0123 |> 
-            Array.map (fun a' -> timer sw (fun () -> CountSketch t a' stream) |> estimateSquareSum) |>
-            Array.sort |>
-            Array.zip [|1..(Array.length a0123)|]
+        let results = Array.map (fun a' -> timer sw (fun () -> CountSketch t a' stream) |> estimateSquareSum) a0123
         let time = sw.Elapsed.TotalMilliseconds / float (Array.length a0123)
+        let medians =
+            results
+            |> Array.chunkBySize 11
+            |> Array.filter (fun chunk -> chunk.Length = 11)
+            |> Array.map (fun chunk -> (Array.sort chunk)[6])
+            |> Array.sort
+            |> Array.zip [|1..((Array.length a0123)/11)|]
+        let mse = (Array.sumBy (fun X -> (X-S)*(X-S)) results) / (Array.length a0123)
+        let points = 
+            results
+            |> Array.sort
+            |> Array.zip [|1..(Array.length a0123)|] 
 
-        time, results
+        time, mse, S, points, medians
 
     
