@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "gLNaG26BKy4=",
+  "dgSpecHash": "VII7gq1QJsU=",
   "success": true,
-  "projectFilePath": "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/Project.fsproj",
+  "projectFilePath": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj",
   "expectedPackageFiles": [
-    "/Users/joraismaili/.nuget/packages/fsharp.core/8.0.400/fsharp.core.8.0.400.nupkg.sha512"
+    "C:\\Users\\andyk\\.nuget\\packages\\fsharp.core\\10.1.300\\fsharp.core.10.1.300.nupkg.sha512",
+    "C:\\Users\\andyk\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\andyk\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\andyk\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\andyk\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.27\\microsoft.netcore.app.host.win-x64.8.0.27.nupkg.sha512"
   ],
   "logs": []
 }
