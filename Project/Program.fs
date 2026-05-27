@@ -1,6 +1,5 @@
 ﻿open Csv
 open Experiments
-open WIP_Experiments
 
 [<EntryPoint>]
 let main argv =

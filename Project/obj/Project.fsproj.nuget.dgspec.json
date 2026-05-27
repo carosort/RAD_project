@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Filer\\Git Repositories\\RAD_project\\Project\\Project.fsproj": {}
+    "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj": {}
   },
   "projects": {
-    "C:\\Filer\\Git Repositories\\RAD_project\\Project\\Project.fsproj": {
+    "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Filer\\Git Repositories\\RAD_project\\Project\\Project.fsproj",
+        "projectUniqueName": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj",
         "projectName": "Project",
-        "projectPath": "C:\\Filer\\Git Repositories\\RAD_project\\Project\\Project.fsproj",
+        "projectPath": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj",
         "packagesPath": "C:\\Users\\andyk\\.nuget\\packages\\",
-        "outputPath": "C:\\Filer\\Git Repositories\\RAD_project\\Project\\obj\\",
+        "outputPath": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
