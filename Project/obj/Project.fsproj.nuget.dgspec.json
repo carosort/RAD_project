@@ -1,31 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj": {}
+    "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/Project.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj": {
+    "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/Project.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj",
+        "projectUniqueName": "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/Project.fsproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\Project.fsproj",
-        "packagesPath": "C:\\Users\\andyk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andyk\\OneDrive\\Dokumenter\\SKOLE\\Københavns Universitet - Bach\\RAD - Randomiserede algoritmer til dataanalyse\\RAD_project\\Project\\obj\\",
+        "projectPath": "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/Project.fsproj",
+        "packagesPath": "/Users/joraismaili/.nuget/packages/",
+        "outputPath": "/Users/joraismaili/Documents/GitHub/kuStyleMatch/Deep_Learning/Deep_learning/RAD_project/Project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/joraismaili/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\10.0.300\\FSharp\\library-packs": {},
+          "/usr/local/share/dotnet/sdk/8.0.401/FSharp/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
-            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -34,18 +33,16 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[10.1.300, )",
+              "version": "[8.0.400, )",
               "generatePathProperty": true
             }
           },
@@ -60,30 +57,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.27, 8.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.27, 8.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.27, 8.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.27, 8.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
