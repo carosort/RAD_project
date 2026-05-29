@@ -1,45 +1,66 @@
-# RAD Project
+# RAD Implementeringsprojekt
 
-Small F# project containing streaming data structures, hashing utilities, and experiment harnesses used in the RAD research/learning experiments.
+F# implementering af to algoritmer til analyse af datastrømme: **hashing med chaining** (eksakt) og **Count-Sketch** (approksimativ). Projektet er en del af kurset Randomiserede Algoritmer og Datastrukturer.
 
-Contents
-- `Program.fs` — main entry (experiment runner / example usage)
-- `Experiments.fs` — experiment definitions
-- `Timing.fs` — timing and benchmarking helpers
-- `StreamGenerator.fs` — synthetic stream generation utilities
-- `DataStructures/` — implementations such as `CountSketch.fs`, `HashTable.fs`
-- `Hashing/` — hashing helpers (`FourUniversal.fs`, `MultiplyModPrime.fs`, `MultiplyShift.fs`)
-- `test.json` — example input/config
-
-Prerequisites
-- .NET SDK 8.0 or later (install from https://dotnet.microsoft.com)
-
-Quick start
-1. Open a terminal in the `Project` directory.
-2. Build the project:
+## Projektstruktur
 
 ```
-dotnet build
+Project/
+├── Program.fs                  ← Hovedprogram — kør eksperimenter her
+├── Experiments.fs              ← Opgave 1, 3, 7 og 8
+├── StreamGenerator.fs          ← Genererer teststrømme
+├── Timing.fs                   ← Hjælpefunktioner til tidsmåling
+├── Hashing/
+│   ├── MultiplyShift.fs        ← Opgave 1a: multiply-shift hashing
+│   ├── MultiplyModPrime.fs     ← Opgave 1b: multiply-mod-prime hashing
+│   └── FourUniversal.fs        ← Opgave 4: 4-universel hashfunktion
+├── DataStructures/
+│   ├── HashTable.fs            ← Opgave 2: hashtabel med chaining
+│   └── CountSketch.fs          ← Opgave 6: Count-Sketch
+└── test.json                   ← Output fra eksperimenter (JSON format)
 ```
 
-3. Run the project:
+## Opgaver
 
-```
+| Opgave | Fil | Beskrivelse |
+|--------|-----|-------------|
+| 1a | `Hashing/MultiplyShift.fs` | Multiply-shift hashing |
+| 1b | `Hashing/MultiplyModPrime.fs` | Multiply-mod-prime hashing |
+| 2 | `DataStructures/HashTable.fs` | Hashtabel med chaining (get, set, increment) |
+| 3 | `Experiments.fs` → `Opgave_3` | Kvadratsummer med hashtabel |
+| 4 | `Hashing/FourUniversal.fs` | 4-universel hashfunktion g(x) |
+| 5 | `DataStructures/CountSketch.fs` | Hashfunktioner h og s til Count-Sketch |
+| 6 | `DataStructures/CountSketch.fs` | Count-Sketch implementering |
+| 7+8 | `Experiments.fs` → `Opgave_7_8` | Count-Sketch eksperimenter |
+
+## Krav
+
+- .NET SDK 8.0 eller nyere — download fra https://dotnet.microsoft.com
+
+## Kør programmet
+
+Åbn en terminal i `Project/` mappen og kør:
+
+```bash
 dotnet run
 ```
 
-Common tasks
-- Clean build artifacts: `dotnet clean`
+Output skrives som JSON til terminalen. For at gemme det til en fil:
 
-Notes
-- This repository is a research/experiment workspace. Files are organized to make it easy to run small benchmarks and algorithmic experiments.
-- To add experiments, update `Experiments.fs` and `Program.fs` to include new experiment cases.
+```bash
+dotnet run > test.json
+```
 
-Contributing
-- Feel free to open issues or raise pull requests with improvements or bug fixes.
+## Parametre
 
-License
-- Add a license file if you intend to publish this code. Currently unlicensed.
+Parametrene styres øverst i `Program.fs`:
 
-Contact
-- Maintainer: see repository owner or add your contact details here.
+```fsharp
+let n: int = 1 <<< 25   // strømlængde (2^25 ≈ 33 millioner)
+let l: int = 7          // antal forskellige nøgler = 2^l
+```
+
+Eksperimenterne der køres:
+- `Opgave_1 n l ...` — køretidstest af hashfunktioner
+- `Opgave_3 n [|5..25|] ...` — kvadratsummer ved stigende l
+- `Opgave_7_8 n l [|5; 10|] ...` — Count-Sketch med forskellige m = 2^t
