@@ -10,7 +10,6 @@
     <!-- Utilities -->
     <Compile Include="Timing.fs" />
     <Compile Include="StreamGenerator.fs" />
-    <Compile Include="Csv.fs" />
 
     <!-- Hash functions -->
     <Compile Include="Hashing/MultiplyShift.fs" />
