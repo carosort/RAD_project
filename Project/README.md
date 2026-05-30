@@ -7,13 +7,13 @@ F# implementering af to algoritmer til analyse af datastrømme: **hashing med ch
 ```
 Project/
 ├── Program.fs                  ← Hovedprogram — kør eksperimenter her
-├── Experiments.fs              ← Opgave 1, 3, 7 og 8
+├── Experiments.fs              ← Opgave 1c, 3, 7 og 8
 ├── StreamGenerator.fs          ← Genererer teststrømme
 ├── Timing.fs                   ← Hjælpefunktioner til tidsmåling
 ├── Hashing/
 │   ├── MultiplyShift.fs        ← Opgave 1a: multiply-shift hashing
 │   ├── MultiplyModPrime.fs     ← Opgave 1b: multiply-mod-prime hashing
-│   └── FourUniversal.fs        ← Opgave 4: 4-universel hashfunktion
+│   └── FourUniversal.fs        ← Opgave 4 & 5: 4-universel hashfunktion (til Count-Sketch)
 ├── DataStructures/
 │   ├── HashTable.fs            ← Opgave 2: hashtabel med chaining
 │   └── CountSketch.fs          ← Opgave 6: Count-Sketch
@@ -26,10 +26,11 @@ Project/
 |--------|-----|-------------|
 | 1a | `Hashing/MultiplyShift.fs` | Multiply-shift hashing |
 | 1b | `Hashing/MultiplyModPrime.fs` | Multiply-mod-prime hashing |
+| 1c | `Experiments.fs` → `Opgave_1` | Køretid af hashfunktioner |
 | 2 | `DataStructures/HashTable.fs` | Hashtabel med chaining (get, set, increment) |
 | 3 | `Experiments.fs` → `Opgave_3` | Kvadratsummer med hashtabel |
 | 4 | `Hashing/FourUniversal.fs` | 4-universel hashfunktion g(x) |
-| 5 | `DataStructures/CountSketch.fs` | Hashfunktioner h og s til Count-Sketch |
+| 5 | `Hashing/FourUniversal.fs` | Hashfunktioner h og s til Count-Sketch |
 | 6 | `DataStructures/CountSketch.fs` | Count-Sketch implementering |
 | 7+8 | `Experiments.fs` → `Opgave_7_8` | Count-Sketch eksperimenter |
 
